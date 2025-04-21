@@ -1,3 +1,15 @@
+/**
+ * Mystical Prophecy Generator
+ * 
+ * This script generates random, mystical prophecies by combining elements from
+ * four arrays: times, places, actions, and finishers. Each prophecy follows the format:
+ * "On a [time] in a place of [place] you will [action]. [finisher]"
+ */
+
+/**
+ * Array of mystical time periods to be used in prophecies.
+ * @type {string[]}
+ */
 const times = [
     "twilight yet to come",
     "moonless night",
@@ -21,6 +33,10 @@ const times = [
     "night heavy with omens"
 ];
 
+/**
+ * Array of enigmatic places to be used in prophecies.
+ * @type {string[]}
+ */
 const places = [
     "forgotten names",
     "shifting light",
@@ -44,6 +60,10 @@ const places = [
     "distant thunder"
 ];
 
+/**
+ * Array of prophetic actions to be used in prophecies.
+ * @type {string[]}
+ */
 const actions = [
     "walk a path unseen by others",
     "speak truths buried in shadow",
@@ -67,6 +87,10 @@ const actions = [
     "embrace the unknown without fear"
 ];
 
+/**
+ * Array of profound concluding statements to finish prophecies.
+ * @type {string[]}
+ */
 const finishers = [
     "And so it shall be.",
     "The stars have spoken.",
@@ -80,10 +104,24 @@ const finishers = [
     "Mark these words."
 ];
 
+/**
+ * Selects a random phrase from the provided array.
+ * 
+ * @param {string[]} phraseArray - Array of phrases to choose from
+ * @returns {string} A randomly selected phrase from the array
+ */
 function getPhrase(phraseArray) {
     return phraseArray[Math.floor(Math.random() * phraseArray.length)];
 }
 
+/**
+ * Generates and outputs a random mystical prophecy.
+ * 
+ * Selects random elements from the times, places, actions, and finishers arrays
+ * and combines them into a coherent prophecy statement that is logged to the console.
+ * 
+ * @returns {void}
+ */
 function utterProphecy(){
     let time = getPhrase(times);
     let place = getPhrase(places);
