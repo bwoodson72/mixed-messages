@@ -89,6 +89,7 @@ function utterProphecy(){
     let place = getPhrase(places);
     let action = getPhrase(actions);
     let finisher = getPhrase(finishers);
-    let prophecy = `On a ${time} in a ${place} you will ${action}. ${finisher}`;
+    let prophecy = `On a ${time} in a place of ${place} you will ${action}. ${finisher}`;
     console.log(prophecy);
 }
+utterProphecy();
